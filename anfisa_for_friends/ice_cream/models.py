@@ -58,6 +58,10 @@ class IceCream(PublishedModel):
     )
     toppings = models.ManyToManyField(Topping, verbose_name='Топпинги')
     is_on_main = models.BooleanField(default=False, verbose_name='На главную')
+    output_order = models.PositiveSmallIntegerField(
+        default=100, 
+        verbose_name='Порядок отображения'
+    )
     class Meta:
         verbose_name = 'мороженое'
         verbose_name_plural = 'Мороженное'
